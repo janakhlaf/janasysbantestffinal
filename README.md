@@ -29,3 +29,6 @@ git tag backup-v1
 git push origin backup-v1
 ********************************
 all edits done without the payment issus.****
+## تبعت الاوبن ai
+## pip install requests
+## pip install python-multipart
