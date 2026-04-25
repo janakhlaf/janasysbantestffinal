@@ -10,10 +10,12 @@ export const ASSETS_DATA: Asset[] = [
     description: 'High-detail cybernetic neural interface implant with animated holographic displays. Features advanced PBR materials with metallic and emissive properties. Perfect for sci-fi character customization.',
     price: 149,
     thumbnailUrl: IMAGES.HERO_BG_6,
-    modelType: 'character',
+
+    modelType: 'glb', // 👈 مهم
     tags: ['sci-fi', 'cyberpunk', 'technology', 'implant'],
     fileSize: '45 MB',
     format: 'FBX, OBJ, GLTF',
+    modelUrl: 'https://apimhyonvtqhquktvhjb.supabase.co/storage/v1/object/public/assetspreview/simple_nature_pack_glb.glb'
   },
   {
     id: 'asset-002',
@@ -29,18 +31,20 @@ export const ASSETS_DATA: Asset[] = [
     format: 'FBX, Unity Package, Unreal Asset',
   },
   {
-    id: 'asset-003',
-    title: 'Holographic Data Sphere',
-    type: 'Prop',
-    category: 'Props',
-    description: 'Interactive holographic data visualization sphere with animated particle effects. Features customizable color schemes and data patterns. Ideal for UI and cinematic sequences.',
-    price: 79,
-    thumbnailUrl: IMAGES.HERO_BG_7,
-    modelType: 'prop',
-    tags: ['hologram', 'data', 'ui', 'effects'],
-    fileSize: '12 MB',
-    format: 'FBX, OBJ, Blend',
-  },
+  id: 'asset-003',
+  title: 'Fireplace Asset',
+  type: 'Environment',
+  category: 'Environments',
+  description: 'Real 3D fireplace asset loaded from Supabase storage.',
+  price: 79,
+  thumbnailUrl: IMAGES.HERO_BG_7,
+  modelType: 'glb', // 👈 مهم
+  tags: ['fireplace', 'real', '3d'],
+  fileSize: '—',
+  format: 'GLB',
+
+  modelUrl: 'https://apimhyonvtqhquktvhjb.supabase.co/storage/v1/object/public/assetspreview/fireplace_asset.glb'
+},
   {
     id: 'asset-004',
     title: 'Neural Network Drone',
@@ -75,10 +79,12 @@ export const ASSETS_DATA: Asset[] = [
     description: 'Sci-fi consciousness transfer chamber with animated bio-luminescent elements. Features detailed interior mechanics and glass materials with refraction. Perfect for memory/mind-themed scenes.',
     price: 199,
     thumbnailUrl: IMAGES.HERO_BG_8,
-    modelType: 'prop',
+    modelType: 'glb', // 👈 مهم,
     tags: ['sci-fi', 'consciousness', 'memory', 'chamber'],
     fileSize: '92 MB',
     format: 'FBX, OBJ, Blend',
+    modelUrl: 'https://apimhyonvtqhquktvhjb.supabase.co/storage/v1/object/public/assetspreview/Untitled.glb'
+
   },
   {
     id: 'asset-007',
@@ -131,6 +137,7 @@ export const ASSETS_DATA: Asset[] = [
     tags: ['architecture', 'neural', 'organic', 'futuristic'],
     fileSize: '280 MB',
     format: 'FBX, Unity Package, Unreal Asset',
+    
   },
   {
     id: 'asset-011',

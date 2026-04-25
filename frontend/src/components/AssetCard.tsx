@@ -38,7 +38,12 @@ export function AssetCard({ asset, onClick }: AssetCardProps) {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
         <div className="relative aspect-square bg-background/80 overflow-hidden">
-          <Asset3DViewer modelType={asset.modelType} className="w-full h-full" />
+          <Asset3DViewer
+  modelType={asset.modelType}
+  modelUrl={asset.modelUrl}
+  viewMode="card"
+  className="w-full h-full"
+/>
           
           <motion.button
             onClick={handleFavoriteClick}
@@ -92,20 +97,7 @@ export function AssetCard({ asset, onClick }: AssetCardProps) {
             </Button>
           </div>
 
-          {asset.tags && asset.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 pt-2">
-              {asset.tags.slice(0, 3).map((tag, index) => (
-                <Badge
-                  key={index}
-                  variant="outline"
-                  className="text-xs border-border/40 text-muted-foreground"
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          )}
-
+          
           {(asset.fileSize || asset.format) && (
             <div className="flex items-center gap-4 pt-2 text-xs text-muted-foreground">
               {asset.format && (

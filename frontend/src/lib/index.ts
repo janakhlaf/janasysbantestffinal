@@ -2,24 +2,27 @@ export const ROUTE_PATHS = {
   HOME: '/',
   FILMS: '/films',
   ASSETS: '/assets',
-  ABOUT: '/about',
-  PROFILE: '/profile',
+  CART: '/cart',
   SIGNIN: '/signin',
   REGISTER: '/register',
-} as const;
+  PROFILE: '/profile',
+  ABOUT: '/about',
+  MY_LIBRARY: '/my-library',
+};
 
-export interface Film {
+export type Film = {
   id: string;
   title: string;
-  category: string;
   description: string;
+  category: string;
   posterUrl: string;
   videoUrl?: string;
-  duration?: string;
-  releaseYear?: number;
-  director?: string;
-  tags?: string[];
-}
+  downloadable?: boolean;
+  duration: string;
+  releaseYear: number;
+  director: string;
+  tags: string[];
+};
 
 export interface Asset {
   id: string;
@@ -33,6 +36,7 @@ export interface Asset {
   tags?: string[];
   fileSize?: string;
   format?: string;
+  modelUrl?: string;
 }
 
 export interface User {
